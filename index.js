@@ -1,4 +1,7 @@
-const project = {
+const ProjectModule = (function () {
+    return {
+      getInstance: function () {
+        return {
     participants: [],
     pricing: {},
     isBusy: false,
@@ -113,10 +116,12 @@ const project = {
         return result;
     }
 }
-
+}
+}
+})();
 
 module.exports = {
     firstName: 'Alexey',
     secondName: 'Derepa',
-    task: project
+    task: ProjectModule.getInstance()
 }
